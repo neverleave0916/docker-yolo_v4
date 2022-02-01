@@ -16,7 +16,8 @@ A Docker image containing all the dependencies you need to run yolov4 with GPUs.
 
 - This Repository installs all the Dependencies that you need to run yolov4 with GPUs on your machine.
 - YOLO-v4：https://github.com/alexeyab/darknet
-- This Docker image is based on nvcr.io/nvidia/pytorch:20.03-py3([reference](https://ngc.nvidia.com/catalog/containers/nvidia:pytorch))(we won't use PyTorch)
+- This Docker image is based on [nvcr.io/nvidia/pytorch:20.03-py3](https://ngc.nvidia.com/catalog/containers/nvidia:pytorch) (we won't use PyTorch)
+
 - You should have CUDA installed on the machine
 
 ### Test platform
@@ -30,8 +31,8 @@ A Docker image containing all the dependencies you need to run yolov4 with GPUs.
 ## Tutorial
 ### 1. Start docker
 > You may use the `latest` or `auto` tag to specify the image you need.  
-> `latest` is the original image that I generated manually.(2020.07 [build process](https://hackmd.io/@neverleave0916/Hyvoh_O1D))  
-> `auto` is the image that automatic build from this DockerFile.(2022.02)  
+> `latest` is the original image that I generated manually. (2020.07 [build notes](https://hackmd.io/@neverleave0916/Hyvoh_O1D))  
+> `auto` is the image that automatic build from this DockerFile. (2022.02)  
 - **`auto` image does not contain VNC server**  
 - **Except for the package version, there is no difference between the two images. If you can't run Yolo on one, you may try another one.** 
 ```console=
