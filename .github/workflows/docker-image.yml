@@ -13,8 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag neverleave0916/yolo_v4:$(date +%s)
     -
         name: Login to DockerHub
         uses: docker/login-action@v1 
