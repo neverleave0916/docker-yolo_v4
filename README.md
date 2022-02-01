@@ -16,17 +16,17 @@
 - You should have CUDA installed on the machine
 
 ### Test platform
-|   Software    | Version |
-|:--------------|:--------|
-|    Ubunut     | 18.04  |
-|    Docker     | 19.03.8 |
-| Nividia Driver| 440.82 |
-|     CUDA      | 10.2   |
+|   Software    | Version | Version |
+|:--------------|:--------|:--------|
+|    Ubuntu     | 18.04   | 20.04   |
+|    Docker     | 19.03.8 | 20.10.5 |
+| Nvidia Driver | 440.82  | 450.102 |
+|     CUDA      | 10.2    | 11.0    |
 
 ## Tutorial
 ### 1. Start docker
 > You may use `latest` or `auto` tag to specify the image you need.  
-> `latest` is the original image that I generated manually.(2020.07)  
+> `latest` is the original image that I generated manually.(2020.07 [build process](https://hackmd.io/@neverleave0916/Hyvoh_O1D))  
 > `auto` is the image that automatic build from this DockerFile.(2022.02)  
 - **`auto` image does not contain VNC server**  
 - **Except for the package version, there is no difference between the two images. If you can't run Yolo on one, you may try another one.** 
