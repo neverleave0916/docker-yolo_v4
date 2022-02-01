@@ -45,7 +45,8 @@ docker run --gpus all --ipc=host -it -p 8888:8888 -p 5901:5901 neverleave0916/yo
 git clone https://github.com/AlexeyAB/darknet
 chmod -R 777 darknet/  #This step is important
 ```
-### 3. Use make to compile (you can follow the AlexeyAB/darknet tutorial if you want, below are the steps that I use, because I kept getting errors in the AlexeyAB/darknet tutorial)
+### 3. Use make to compile  
+you can follow the AlexeyAB/darknet tutorial if you want, below are the steps that I use, because I kept getting errors in the AlexeyAB/darknet tutorial  
 1. Open Makefile
 ```console=
 cd darknet
