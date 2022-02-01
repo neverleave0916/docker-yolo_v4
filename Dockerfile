@@ -1,5 +1,6 @@
 FROM nvcr.io/nvidia/pytorch:20.03-py3
-
+LABEL maintainer="neverleave0916@gmail.com" version="1.0"
+ 
 #https://askubuntu.com/questions/909277/avoiding-user-interaction-with-tzdata-when-installing-certbot-in-a-docker-contai
 ARG DEBIAN_FRONTEND=noninteractive
 
