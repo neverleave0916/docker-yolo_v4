@@ -3,19 +3,20 @@
 [![GitHub license](https://img.shields.io/github/license/neverleave0916/docker-yolo_v4)](https://github.com/neverleave0916/docker-yolo_v4/blob/main/LICENSE)
 ![Docker Image CI workflow](https://github.com/neverleave0916/docker-yolo_v4/actions/workflows/docker-image.yml/badge.svg)
 
-A Docker Image that contain all the Dependencies that you need to run yolov4 with GPUs.  
-> https://hub.docker.com/repository/docker/neverleave0916/yolo_v4  
+A Docker image containing all the dependencies you need to run yolov4 with GPUs.  
+>  https://github.com/neverleave0916/docker-yolo_v4
 
 <br>
 <br>
 
-**中文教學(full Tutorial)：https://hackmd.io/@neverleave0916/YOLOv4 (可跳過安裝環境，由 3.測試YOLOv4 開始實作)**
+ 
+ **中文教學(full Tutorial)：https://hackmd.io/@neverleave0916/YOLOv4 (可跳過安裝環境，由 3.測試YOLOv4 開始實作)**
 
  **<font color="#B24B42">Last updated:**  2022/2/1 17:52</font>
 
-- This Repository install all the Dependencies that you need to run yolov4 with GPUs on your own machine.
+- This Repository installs all the Dependencies that you need to run yolov4 with GPUs on your machine.
 - YOLO-v4：https://github.com/alexeyab/darknet
-- This Docker image is base on nvcr.io/nvidia/pytorch:20.03-py3([reference](https://ngc.nvidia.com/catalog/containers/nvidia:pytorch))(we won't use pytorch)
+- This Docker image is based on nvcr.io/nvidia/pytorch:20.03-py3([reference](https://ngc.nvidia.com/catalog/containers/nvidia:pytorch))(we won't use PyTorch)
 - You should have CUDA installed on the machine
 
 ### Test platform
@@ -28,7 +29,7 @@ A Docker Image that contain all the Dependencies that you need to run yolov4 wit
 
 ## Tutorial
 ### 1. Start docker
-> You may use `latest` or `auto` tag to specify the image you need.  
+> You may use the `latest` or `auto` tag to specify the image you need.  
 > `latest` is the original image that I generated manually.(2020.07 [build process](https://hackmd.io/@neverleave0916/Hyvoh_O1D))  
 > `auto` is the image that automatic build from this DockerFile.(2022.02)  
 - **`auto` image does not contain VNC server**  
@@ -44,7 +45,7 @@ docker run --gpus all --ipc=host -it -p 8888:8888 -p 5901:5901 neverleave0916/yo
 git clone https://github.com/AlexeyAB/darknet
 chmod -R 777 darknet/  #This step is important
 ```
-### 3. Use make to compile (you can follow the AlexeyAB/darknet tutorial if you want, below are the steps that I use, because I kept get error in the AlexeyAB/darknet tutorial)
+### 3. Use make to compile (you can follow the AlexeyAB/darknet tutorial if you want, below are the steps that I use, because I kept getting errors in the AlexeyAB/darknet tutorial)
 1. Open Makefile
 ```console=
 cd darknet
@@ -79,4 +80,4 @@ caution ：If there are GUI env on your computer，you could remove  -dont_show 
 ```
 3. View the result
 
-If success, you will get predictions.jpg in your folder.
+If succeed, you will get predictions.jpg in your folder.
