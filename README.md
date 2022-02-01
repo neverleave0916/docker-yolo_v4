@@ -8,8 +8,6 @@
  
  **中文教學(full Tutorial)：https://hackmd.io/@neverleave0916/YOLOv4 (可跳過安裝環境，由 3.測試YOLOv4 開始實作)**
 
- **聯絡資訊：<neverleave0916@gmail.com>**
-
  **<font color="#B24B42">Last updated:**  2022/2/1 17:52</font>
 
 - This Repository install all the Dependencies that you need to run yolov4 with GPUs on your own machine.
@@ -26,32 +24,31 @@
 |     CUDA      | 10.2   |
 
 ## Tutorial
-### 1.Start docker
-> You may use `latest` or `auto` tag to specify the image you need.
-> `latest` is the original image that I generated manually.(2020.07)
-> `auto` is the image that automatic build from this DockerFile.(2022.02)
-
-- **`auto` image does not contain VNC server**
-
-- **Except for the package version, there is no difference between the two images. If you can't run Yolo on one, you may try another one.**
+### 1. Start docker
+> You may use `latest` or `auto` tag to specify the image you need.  
+> `latest` is the original image that I generated manually.(2020.07)  
+> `auto` is the image that automatic build from this DockerFile.(2022.02)  
+- **`auto` image does not contain VNC server**  
+- **Except for the package version, there is no difference between the two images. If you can't run Yolo on one, you may try another one.** 
 ```console=
 docker run --gpus all --ipc=host -it -p 8888:8888 -p 5901:5901 neverleave0916/yolo_v4:auto
 ```
 - port 8888: jupyter
 - port 5901: VNC(if installed)
 
-### 2.Clone YOLO
+### 2. Clone YOLO
 ```console=
 git clone https://github.com/AlexeyAB/darknet
 chmod -R 777 darknet/  #This step is important
 ```
-### 3.Use make to compile (you can follow the AlexeyAB/darknet tutorial if you want, below are the steps that I use, because I kept get error in the AlexeyAB/darknet tutorial)
-1. open Makefile
+### 3. Use make to compile (you can follow the AlexeyAB/darknet tutorial if you want, below are the steps that I use, because I kept get error in the AlexeyAB/darknet tutorial)
+1. Open Makefile
 ```console=
 cd darknet
 vim Makefile
 ```
-2. modify these param to train with GPU and display image
+2. Modify these param to train with GPU and display image  
+You may need to follow the newest instruction in the original yolov4 GitHub.
 ```console=
 GPU=1
 CUDNN=1
@@ -63,11 +60,11 @@ LIBSO=1
 ZED_CAMERA=0 # ZED SDK 3.0 and above
 ZED_CAMERA_v2_8=0 # ZED SDK 2.X
 ```
-3. compile
+3. Compile
 ```console=
 make
 ```
-4.test YOLOv4
+### 4. Test YOLOv4
 1. get the pre-train weights
 ```console=
 wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights
